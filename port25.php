@@ -1,5 +1,5 @@
 <?php
-// found elements on a couple of posts in stackexchange
+// found elements on a couple of posts in stackexchange - not my own code
 // determine if an email address has an ms server that talks to the world
 // intent is not to send email, but to have enough of a dialog with an SMTP server to determine
 // if it will accept an email for an email address.
