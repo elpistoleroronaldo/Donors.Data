@@ -1,4 +1,8 @@
 <?php
+// found elements on a couple of posts in stackexchange
+// determine if an email address has an ms server that talks to the world
+// intent is not to send email, but to have enough of a dialog with an SMTP server to determine
+// if it will accept an email for an email address.
 $publichost = 'btopenworld.com';
 echo '<br />querying DNS for ' . $publichost;
 $mxarray = dns_get_record($publichost , DNS_MX);
@@ -12,7 +16,7 @@ if (!$fp) {
     $result = "Error: could not open socket connection";
 }
 else { // get the welcome message fgets ($fp, 1024); // write the user string to the socket
-    fputs($fp, 'EHLO mx.mntcglobal.com\r\n'); // get the result $result .= fgets ($fp, 1024); // close the connection
+    fputs($fp, 'EHLO mx.bubba.com\r\n'); // get the result $result .= fgets ($fp, 1024); // close the connection
     $result .= fgets($fp);
     //fputs ($fp, "END");
     fclose ($fp); // trim the result and remove the starting ?
